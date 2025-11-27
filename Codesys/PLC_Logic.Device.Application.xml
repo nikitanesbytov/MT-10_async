@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="4.0.0.0" runtimeid="3.5.17.30" libversion="3.5.17.0" compiler="3.5.17.30" lmm="3.5.17.0" profile="CODESYS V3.5 SP17 Patch 3+" settings="SupportOPCUA, LayoutCalculator=OptimizedClientSideLayoutCalculator" />
+    <ProjectInfo name="PLC_Logic" devicename="Device" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+    <TypeSimple name="T_WORD" size="2" swapsize="2" typeclass="Word" iecname="WORD" />
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="ARRAY_FOR_SCADA">
+        <Node name="L_roll_SCADA_0" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_1" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_10" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_11" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_12" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_13" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_14" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_15" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_16" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_17" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_18" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_19" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_2" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_3" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_4" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_5" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_6" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_7" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_8" type="T_REAL" access="ReadWrite" />
+        <Node name="L_roll_SCADA_9" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_0" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_1" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_10" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_11" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_12" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_13" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_14" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_15" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_16" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_17" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_18" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_19" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_2" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_3" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_4" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_5" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_6" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_7" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_8" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_SCADA_9" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_0" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_1" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_10" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_11" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_12" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_13" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_14" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_15" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_16" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_17" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_18" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_19" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_2" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_3" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_4" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_5" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_6" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_7" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_8" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_SCADA_9" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_0" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_1" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_10" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_11" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_12" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_13" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_14" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_15" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_16" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_17" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_18" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_19" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_2" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_3" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_4" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_5" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_6" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_7" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_8" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_SCADA_9" type="T_REAL" access="ReadWrite" />
+      </Node>
+      <Node name="BAT">
+        <Node name="Activate_bat" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="GVL">
+        <Node name="alarm" type="T_WORD" access="ReadWrite" />
+        <Node name="counter" type="T_INT" access="ReadWrite" />
+        <Node name="D_direction_roll_PLC" type="T_BOOL" access="ReadWrite" />
+        <Node name="F_left_position" type="T_BOOL" access="ReadWrite" />
+        <Node name="F_right_position" type="T_BOOL" access="ReadWrite" />
+        <Node name="Initialized" type="T_BOOL" access="ReadWrite" />
+        <Node name="L_roll" type="T_REAL" access="ReadWrite" />
+        <Node name="M_rolling" type="T_REAL" access="ReadWrite" />
+        <Node name="N_iterrations_SCADA" type="T_INT" access="ReadWrite" />
+        <Node name="N_rolling" type="T_REAL" access="ReadWrite" />
+        <Node name="P_top_roll" type="T_REAL" access="ReadWrite" />
+        <Node name="reset_alarm_SCADA" type="T_BOOL" access="ReadWrite" />
+        <Node name="Status_code" type="T_WORD" access="ReadWrite" />
+        <Node name="t_pyrometer_1" type="T_REAL" access="ReadWrite" />
+        <Node name="t_pyrometer_2" type="T_REAL" access="ReadWrite" />
+        <Node name="V_left_rollers_PLC_P" type="T_REAL" access="ReadWrite" />
+        <Node name="V_right_rollers_PLC_P" type="T_REAL" access="ReadWrite" />
+        <Node name="V_roll_PLC_P" type="T_REAL" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
