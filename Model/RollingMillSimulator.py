@@ -41,6 +41,28 @@ class RollingMillSimulator(RollingMill):
         step_size = (end - start) / steps
         return step_size
     
+    def clear_logs(self):
+        self.time_log = [0]  # Лог отображения нынешнего иммитируемого времени
+        self.temperature_log = [self.StartTemp]  # Лог изменения температуры сляба
+        self.length_log = [self.L]  # Лог изменения длины сляба
+        self.height_log = [self.h_0]  # Лог толщины сляба(перед началом прокатки)(мм)
+        self.LeftCap = [0]  # Левый концевик
+        self.RightCap = [0]  # Правый концевик
+        self.x_log = [0]  # Лог начальной координаты сляба
+        self.x1_log = [self.L]  # Лог конечной координаты сляба
+        self.pyrometr_1 = [self.TempV]  # Лог пирометра перед валками
+        self.pyrometr_2 = [self.TempV]  # Лог пирометра после валков
+        self.gap_log = [self.CurrentS]  # Лог раствора валков(мм)
+        self.speed_V = [0]  # Лог скорости варщения валков(об/c)
+        self.speed_V0 = [0]  # Лог скорости вращения рольгангов до валков(об/c)
+        self.speed_V1 = [0]  # Лог скорости вращения рольгангов после валков(об/c)
+        self.effort_log = [0]  # Лог усилия прокаткатки(кН)
+        self.moment_log = [0]  # Лог момента прокаткатки(кН*м)
+        self.power_log = [0]  # Лог мощности прокатки(кВт)
+        self.Gap_feedbackLog = [0]  # Лог флага обратной свзяи о выхождении раствора на заданную уставку 
+        self.Speed_V_feedbackLog = [0]  # Лог флага обратной свзяи о выхождении скорости валков на заданную уставку
+
+    
     def save_logs_to_excel(self, filename="rolling_log.xlsx"):
         "Сохраняет логи в XLSX файл с русскими названиями столбцов и форматированием"
         wb = Workbook()
