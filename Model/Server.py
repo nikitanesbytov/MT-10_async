@@ -402,58 +402,58 @@ class AsyncModbusServer:
                 self.initialized = False
                 await self.start_init_from_registers()
                 continue
-            # if Start_Switch:
-            if Start and not self.simulation_in_progress:
-                # 1. Установка зазора
-                self.status_code = 4
-                self.hr_data_combined.setValues(33, [self.status_code])
-                if Start_Gap and self.counter == 0 and self.counter2 < 2:
-                    Roll_pos = regs_to_float(regs[2], regs[3])
-                    sim_result = self.simulator._Gap_Valk_(Roll_pos, Dir_of_rot_valk)
-                    await self.write_simulation_data_to_registers(sim_result)
-                    self.counter = 1
-                    self.counter2 += 1
+            if Start_Switch:
+                if Start and not self.simulation_in_progress:
+                    # 1. Установка зазора
+                    self.status_code = 4
+                    self.hr_data_combined.setValues(33, [self.status_code])
+                    if Start_Gap and self.counter == 0 and self.counter2 < 2:
+                        Roll_pos = regs_to_float(regs[2], regs[3])
+                        sim_result = self.simulator._Gap_Valk_(Roll_pos, Dir_of_rot_valk)
+                        await self.write_simulation_data_to_registers(sim_result)
+                        self.counter = 1
+                        self.counter2 += 1
 
-                # 2. Разгон валков
-                if Start_Accel and self.counter == 1 and self.counter2 < 2:
-                    Num_of_revol_rolls = regs_to_float(regs[0], regs[1])
-                    sim_result = self.simulator._Accel_Valk_(Num_of_revol_rolls, Dir_of_rot_rolg, Dir_of_rot_rolg)
-                    await self.write_simulation_data_to_registers(sim_result)
-                    self.counter = 2
-                    self.counter2 += 1
+                    # 2. Разгон валков
+                    if Start_Accel and self.counter == 1 and self.counter2 < 2:
+                        Num_of_revol_rolls = regs_to_float(regs[0], regs[1])
+                        sim_result = self.simulator._Accel_Valk_(Num_of_revol_rolls, Dir_of_rot_rolg, Dir_of_rot_rolg)
+                        await self.write_simulation_data_to_registers(sim_result)
+                        self.counter = 2
+                        self.counter2 += 1
 
-                # 3. Подход, проход и выход из валков
-                if Start_Roll and self.counter == 2 and self.counter2 <= 2:
-                    Num_of_revol_0rollg = regs_to_float(regs[4], regs[5])
-                    Num_of_revol_1rollg = regs_to_float(regs[6], regs[7])
+                    # 3. Подход, проход и выход из валков
+                    if Start_Roll and self.counter == 2 and self.counter2 <= 2:
+                        Num_of_revol_0rollg = regs_to_float(regs[4], regs[5])
+                        Num_of_revol_1rollg = regs_to_float(regs[6], regs[7])
 
-                    sim_result = self.simulator._Approching_to_Roll_(
-                        Dir_of_rot,
-                        Num_of_revol_0rollg,
-                        Num_of_revol_1rollg,
-                    )
-                    await self.write_simulation_data_to_registers(sim_result)
+                        sim_result = self.simulator._Approching_to_Roll_(
+                            Dir_of_rot,
+                            Num_of_revol_0rollg,
+                            Num_of_revol_1rollg,
+                        )
+                        await self.write_simulation_data_to_registers(sim_result)
 
-                    sim_result = self.simulator._simulate_rolling_pass()
-                    await self.write_simulation_data_to_registers(sim_result)
+                        sim_result = self.simulator._simulate_rolling_pass()
+                        await self.write_simulation_data_to_registers(sim_result)
 
-                    sim_result = self.simulator._simulate_exit_from_rolls()
-                    await self.write_simulation_data_to_registers(sim_result)
+                        sim_result = self.simulator._simulate_exit_from_rolls()
+                        await self.write_simulation_data_to_registers(sim_result)
 
-                    self.counter2 += 1
-            else:
-                self.status_code = 3
-                self.hr_data_combined.setValues(33, [self.status_code])
-                self.counter = 0
-                self.counter2 = 0
-            # else:
-            #     self.counter = 0
-            #     self.counter2 = 0
-            #     self.nex_idx = 0
-            #     self.prev_total_steps = 0
-            #     self.status_code = 2
-            #     self.hr_data_combined.setValues(33, [self.status_code])
-            #     RollingMillSimulator.clear_logs(self.simulator)
+                        self.counter2 += 1
+                    else:
+                        self.status_code = 3
+                        self.hr_data_combined.setValues(33, [self.status_code])
+                        self.counter = 0
+                        self.counter2 = 0
+                else:
+                    self.status_code = 2
+                    self.hr_data_combined.setValues(33, [self.status_code])
+                    self.counter = 0
+                    self.counter2 = 0
+                    self.nex_idx = 0
+                    self.prev_total_steps = 0
+                    RollingMillSimulator.clear_logs(self.simulator)
             await asyncio.sleep(0.1)
 
 # ===================== Точка входа =====================
